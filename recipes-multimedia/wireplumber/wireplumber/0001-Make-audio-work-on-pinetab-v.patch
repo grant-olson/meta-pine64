@@ -1,0 +1,22 @@
+From 9ed1e45156501b08a83a1f7300918d27fbc56a63 Mon Sep 17 00:00:00 2001
+From: "Grant T. Olson" <kgo@grant-olson.net>
+Date: Wed, 9 Aug 2023 20:26:23 +0000
+Subject: [PATCH] Make audio work on pinetab-v
+
+---
+ src/config/main.lua.d/50-alsa-config.lua | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/config/main.lua.d/50-alsa-config.lua b/src/config/main.lua.d/50-alsa-config.lua
+index 61a0aefa..d13ddddd 100644
+--- a/src/config/main.lua.d/50-alsa-config.lua
++++ b/src/config/main.lua.d/50-alsa-config.lua
+@@ -65,7 +65,7 @@ alsa_monitor.rules = {
+     apply_properties = {
+       -- Use ALSA-Card-Profile devices. They use UCM or the profile
+       -- configuration to configure the device and mixer settings.
+-      ["api.alsa.use-acp"] = true,
++      -- ["api.alsa.use-acp"] = true,
+ 
+       -- Use UCM instead of profile when available. Can be
+       -- disabled to skip trying to use the UCM profile.
