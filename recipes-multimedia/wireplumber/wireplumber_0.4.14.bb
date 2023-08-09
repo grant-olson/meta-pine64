@@ -12,10 +12,10 @@ DEPENDS = "glib-2.0 glib-2.0-native lua pipewire \
 "
 
 SRCREV = "6d0c7f7b7f484b3cd2aaf2e2b3cc902c095b4946"
-SRC_URI = " \
-    git://gitlab.freedesktop.org/pipewire/wireplumber.git;branch=master;protocol=https \
-    file://90-OE-disable-session-dbus-dependent-features.lua \
-"
+SRC_URI = "git://gitlab.freedesktop.org/pipewire/wireplumber.git;branch=master;protocol=https \
+           file://90-OE-disable-session-dbus-dependent-features.lua \
+           ${@oe.utils.conditional('MACHINE', 'pinetabv', 'file://0001-Make-audio-work-on-pinetab-v.patch', '', d)} \
+           "
 
 S = "${WORKDIR}/git"
 
