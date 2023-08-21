@@ -48,6 +48,7 @@ RDEPENDS:packagegroup-star64-minimal = " \
     mg \
     emacs \
     nano \
+    zsh \
 "
 
 COMPATIBLE_MACHINE = "star64|pinetabv"
