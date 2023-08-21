@@ -45,6 +45,9 @@ RDEPENDS:packagegroup-star64-minimal = " \
     cmake \
     meson \
     tree \
+    mg \
+    emacs \
+    nano \
 "
 
 COMPATIBLE_MACHINE = "star64|pinetabv"
